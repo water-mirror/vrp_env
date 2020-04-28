@@ -1,0 +1,30 @@
+[package]
+name = "vrp_env"
+version = "0.1.1"
+authors = ["ioriiod0"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[lib]
+name = "vrp_env"
+crate-type = ["cdylib"]
+
+
+[dependencies]
+serde = { version = "1.0", features = ["derive","rc"] }
+serde_json = "1.0"
+log = "0.4.6"
+hashbrown = "0.5"
+rand = "0.7.0"
+dict_derive = "0.2.0"
+simplelog = "^0.7.4"
+rayon = "1.1"
+
+[dev-dependencies]
+galvanic-test = "0.2"
+
+[dependencies.pyo3]
+version = "0.8.3"
+features = ["extension-module"]
